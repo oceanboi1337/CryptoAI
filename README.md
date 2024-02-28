@@ -1,0 +1,2 @@
+# CryptoAI
+PyTorch tomfoolery

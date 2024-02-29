@@ -10,8 +10,6 @@ def main():
     batch_size = 64
 
     src_features = ['open', 'high', 'low', 'close', 'volume']
-    #src_features = ['close']
-
 
     dataset = cryptodata.CryptoDataset('datasets/BTC-USD-daily.csv', src_features, src_features, feature_engineering=True, batch_size=batch_size, shuffle=False)
 

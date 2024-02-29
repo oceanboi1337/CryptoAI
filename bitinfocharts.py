@@ -68,8 +68,8 @@ def fetch(start_date, end_date, coins: list[str], charts: list[str]) -> pd.DataF
         df = df[(df['date'] >= start_date) & (df['date'] <= end_date)]
         df.fillna(0, inplace=True)
 
-    df.to_csv('datasets/bitinfo.csv')
     return df
 
 if __name__ == '__main__':
-    fetch('2014-09-17', '2024-02-22', ['btc', 'eth', 'ltc'], ['hashrate', 'tweets', 'transactions', 'marketcap', 'difficulty'])
+    df = fetch('2014-09-17', '2024-02-22', ['btc', 'eth', 'ltc'], ['hashrate', 'tweets', 'transactions', 'marketcap', 'difficulty'])
+    df.to_csv('datasets/bitinfo.csv')
